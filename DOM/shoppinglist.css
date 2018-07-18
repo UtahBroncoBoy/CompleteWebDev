@@ -1,0 +1,37 @@
+h1{
+  color: blue;
+  text-shadow: 1px 1px #8d8c8d;
+}
+
+li{
+  padding-bottom: 3px;
+}
+
+.errorMessage {
+  color: red;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.done{
+  color: black;
+  text-decoration: line-through;
+}
+
+.deleteButton {
+  border: none;
+  margin-left: 2px;
+  /* border-radius: 3px; */
+  font-size: .5em;
+  position: absolute;
+  color: red;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+}
+
+#shoppingList {
+  color: blue;
+}
+

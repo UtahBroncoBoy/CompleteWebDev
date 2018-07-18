@@ -1,0 +1,21 @@
+.btn-primary {
+  background-color: purple;
+  border-color: purple;
+  margin-left: 20px;
+}
+
+.btn-primary:hover {
+  transition: 500ms ease-in-out;
+  transform: scale(1.1);
+  background-color: black;
+  border-color: lime;
+}
+
+.col  {
+  background-color: grey;
+  border: 2px solid black;
+}
+
+.container-fluid, .container {
+  width: 100%;
+}

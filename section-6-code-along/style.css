@@ -1,0 +1,41 @@
+body {
+  background-image: url(http://mapinstitute.org/data/wallpapers/110/im57775654.jpg);
+  background-size: cover;
+}
+
+h2 {
+  color:#764B8E;
+  text-align: center;
+  border: 5px solid #764B8E;
+}
+
+p {
+  color:#9775AA;
+  padding:15px;
+  line-height:30px;
+  font-weight: 300;
+  font-size: 150%;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  color: white;
+  display: inline;
+  padding: 10px;
+}
+
+footer  {
+  clear: both;
+  text-align: center;
+}
+
+.webtext  {
+  border: 5px dashed green;
+}
+
+img {
+  float: left;
+  padding:20px;
+}

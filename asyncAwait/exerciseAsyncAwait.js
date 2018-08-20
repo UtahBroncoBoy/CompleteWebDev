@@ -17,7 +17,7 @@ async function getStarship() {
 // So there shouldn't be any .then() calls anymore!
 // Don't get discouraged... this is a really tough one...
 const urls = [
-  'https://jsonplaceholder.typicode.com/us',
+  'https://jsonplaceholder.typicode.com/users',
   'https://jsonplaceholder.typicode.com/posts',
   'https://jsonplaceholder.typicode.com/albums'
 ]
@@ -29,10 +29,10 @@ const getData = async function() {
         return response.json();
     }));
     console.log('users', users);
-    console.log('posta', posts);
+    console.log('posts', posts);
     console.log('albums', albums);
-  }catch(error){
-    console.log('Ooops!');
+  }catch(err){
+    console.log(`Ooops!`, err);
   }
 }
 

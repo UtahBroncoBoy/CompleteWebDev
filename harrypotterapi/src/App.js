@@ -27,7 +27,7 @@ class App extends Component {
     const { characters } = this.state;
     return (
       <div className="App">
-        <h1>Harry Potter Characters</h1>
+        <h1 className='f1'>Harry Potter Characters</h1>
         <CharacterList characters = {characters} />
       </div>
     );

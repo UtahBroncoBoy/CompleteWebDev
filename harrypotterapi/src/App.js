@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import CharacterList from './CharacterList';
 import './App.css';
 
+//initialize the app component
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      characters:[]
+    }
+  }
+
+  //bring in data from the HP api
+  componentDidMount() {
+    fetch(`http://hp-api.herokuapp.com/api/characters`)
+      .then(response => response.json())
+      .then(characters => this.setState(
+        {
+          characters: characters
+        }
+      ))
+  }
+
+  //render the app component
   render() {
+    const { characters } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Harry Potter Characters</h1>
+        <CharacterList characters = {characters} />
       </div>
     );
   }

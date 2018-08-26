@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharacterList from './CharacterList';
+import 'tachyons';
 import './App.css';
 
 //initialize the app component
@@ -27,7 +28,7 @@ class App extends Component {
     const { characters } = this.state;
     return (
       <div className="App">
-        <h1 className='f1'>Harry Potter Characters</h1>
+        <h1>Harry Potter Characters</h1>
         <CharacterList characters = {characters} />
       </div>
     );

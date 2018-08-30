@@ -22,14 +22,25 @@ class App extends React.Component {
     const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=imperial`);
     const data = await api_call.json();
     if (city && country) {
-      this.setState({
-        temperature: data.main.temp,
-        city: data.name,
-        country: data.sys.country,
-        humidity: data.main.humidity,
-        description: data.weather[0].description,
-        error: ''
-      })
+      try {
+        this.setState({
+          temperature: data.main.temp,
+          city: data.name,
+          country: data.sys.country,
+          humidity: data.main.humidity,
+          description: data.weather[0].description,
+          error: ''
+        })
+      } catch (error){
+        this.setState({
+          temperature: undefined,
+          city: undefined,
+          country: undefined,
+          humidity: undefined,
+          description: undefined,
+          error: 'There was an issue while attempting to access the data. Make sure the city and country have been entered correctly.'
+        })
+      }
     } else {
       this.setState({
         temperature: undefined,

@@ -4,11 +4,15 @@
   "description": "",
   "main": "practice.js",
   "scripts": {
-    "start": "nodemon"
+    "start": "nodemon expressServer.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
   }
 }

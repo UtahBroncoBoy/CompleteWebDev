@@ -3,14 +3,21 @@ const upAndDown = '()()(()()()(()()((()((()))((()((((()()((((()))()((((())((((((
 const helpSanta = (data) => {
     
     let floor = 0;
+    basementFound = false;
     for(let i=0; i < data.length; i++)  {
         if(data.charAt(i) === '(') {
             floor++;
         } else {
             floor--;
         }
+        if(basementFound === false) {
+            if (floor === -1) {
+                basementFound = true;
+                console.log(`Santa enters the basement at character position ` + (i+1));
+            }
+        }
     }
-    console.log(floor);
+    console.log(`Santa ends up on floor #` + floor);
 }
 
 helpSanta(upAndDown);

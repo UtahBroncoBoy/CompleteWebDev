@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 fs.readFile('./helpSanta.txt', (err, data) => {
+    console.time('measureFunction');
     if (err) throw err;
     let upAndDown = data.toString();
     let floor = 0;
@@ -15,9 +16,10 @@ fs.readFile('./helpSanta.txt', (err, data) => {
         if(basementFound === false) {
             if (floor === -1) {
                 basementFound = true;
-                console.log(`Santa enters the basement at character position ` + (i+1));
+                console.log(`Santa enters the basement at character position #${i+1}`);
             }
         }
     }
-    console.log(`Santa ends up on floor #` + floor);    
+    console.log(`Santa ends up on floor #${floor}`);   
+    console.timeEnd('measureFunction'); 
 })

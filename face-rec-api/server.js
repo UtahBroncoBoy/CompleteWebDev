@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 const database = {
     users: [
@@ -37,7 +39,6 @@ app.post('/signin', (req, res) => {
     } else {
         res.status(400).json('Error logging in. Please check your password.');
     }
-    res.json('sign in')
 })
 
 app.post('/register', (req, res) => {
